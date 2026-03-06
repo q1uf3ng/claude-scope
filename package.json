@@ -1,0 +1,23 @@
+{
+  "name": "claude-scope-monorepo",
+  "private": true,
+  "version": "0.1.0",
+  "description": "DevTools for Claude API & Claude Code",
+  "scripts": {
+    "build": "pnpm --filter @claude-scope/ui build && pnpm --filter @claude-scope/sdk build && pnpm run build:proxy",
+    "build:proxy": "cp -r packages/ui/dist packages/proxy/ui-dist && pnpm --filter @q1uf3ng/claude-scope build",
+    "dev": "pnpm -r --parallel dev",
+    "clean": "pnpm -r clean",
+    "typecheck": "pnpm -r typecheck",
+    "test": "pnpm --filter @q1uf3ng/claude-scope test"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  }
+}

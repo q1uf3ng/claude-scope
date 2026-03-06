@@ -1,0 +1,12 @@
+node_modules/
+dist/
+ui-dist/
+*.db
+*.db-journal
+.env
+.env.local
+.DS_Store
+coverage/
+release/
+/tmp/
+*.log

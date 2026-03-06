@@ -1,0 +1,54 @@
+{
+  "name": "@q1uf3ng/claude-scope",
+  "version": "0.1.0",
+  "description": "DevTools for Claude API & Claude Code — real-time proxy, cost tracking, and observability dashboard",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "claude-scope": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "ui-dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "clean": "rm -rf dist",
+    "typecheck": "tsc --noEmit",
+    "test": "node test/integration.test.mjs"
+  },
+  "keywords": [
+    "claude",
+    "anthropic",
+    "devtools",
+    "proxy",
+    "observability",
+    "cost-tracking",
+    "token-counting",
+    "claude-code",
+    "ai-agent",
+    "debugging"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/q1uf3ng/claude-scope.git",
+    "directory": "packages/proxy"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "sql.js": "^1.10.0",
+    "ws": "^8.16.0",
+    "open": "^10.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/ws": "^8.5.10",
+    "tsup": "^8.0.0",
+    "typescript": "^5.3.0"
+  }
+}
